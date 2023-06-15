@@ -601,6 +601,13 @@
                         }
                     }
                 }
+                /* 
+                if (actualDistance >= 1000){
+                    this.gameOver();
+                }
+                */
+
+
             }
 
             if (this.playing || (!this.activated &&
