@@ -454,6 +454,7 @@
 
                 // Game over panel.
                 if (this.crashed && this.gameOverPanel) {
+                    console.log("over");
                     this.gameOverPanel.updateDimensions(this.dimensions.WIDTH);
                     this.gameOverPanel.draw();
                 }
@@ -508,6 +509,8 @@
             this.tRex.playingIntro = false;
             this.containerEl.style.webkitAnimation = '';
             this.playCount++;
+
+            console.log("start");
 
             // Handle tabbing off the page. Pause the current game.
             document.addEventListener(Runner.events.VISIBILITY,
@@ -572,7 +575,6 @@
                 } else {
                     this.gameOver();
                 }
-
                 var playAchievementSound = this.distanceMeter.update(deltaTime,
                     Math.ceil(this.distanceRan));
 
@@ -601,13 +603,12 @@
                         }
                     }
                 }
-                /* 
+                
                 if (actualDistance >= 1000){
                     this.gameOver();
                 }
-                */
 
-
+                console.log(actualDistance);
             }
 
             if (this.playing || (!this.activated &&
@@ -785,6 +786,7 @@
          * Game over state.
          */
         gameOver: function () {
+            console.log("crashed!");
             this.playSound(this.soundFx.HIT);
             vibrate(200);
 
