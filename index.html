@@ -2382,8 +2382,7 @@
                 WIDTH: 20
             };
     
-            NightMode.phases = [140, 120, 100, 15, 10, 5, 0];
-            //NightMode.phases = [140, 120, 100, 60, 40, 20, 0];
+            NightMode.phases = [140, 120, 100, 60, 40, 20, 0];
     
             NightMode.prototype = {
                 /**
@@ -2864,6 +2863,7 @@
 </head>
 
 <body class="offline">
+    <h1 style="text-align: center;font-family: 'Open Sans', sans-serif; margin-top: 200px;" id="gametitle">Super Jumper: Ellens Birthday Odyssey</h1>
     <h2 style="text-align: center;font-family: 'Open Sans', sans-serif;" id="stats_highscore"></h2>
     <h2 style="text-align: center;font-family: 'Open Sans', sans-serif;" id="output"></h2>
     <div id="nameinputdiv">
@@ -2895,12 +2895,15 @@
 </body>
 
 <script>
+    
     document.getElementById("t").style.visibility="hidden";
     document.onkeydown = function(evt) {
         evt = evt || window.event;
         if (evt.keyCode == 32) {
             var box = document.getElementById("messageBox");
             box.style.visibility="hidden";
+            document.getElementById("gametitle").remove();
+            document.getElementById("output").remove();
         }
     };
 </script>
