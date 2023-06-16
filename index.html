@@ -59,7 +59,11 @@
             var output = document.getElementById("output");
             output.textContent = "Player " + userInput;
     
-            document.getElementById("nameinputdiv").style.visibility="hidden";
+            document.getElementById("messageBox").remove()
+            document.getElementById("gametitle").remove();
+            document.getElementById("output").remove();
+            //document.getElementById("nameinputdiv").style.visibility="hidden";
+            document.getElementById("nameinputdiv").remove();
             document.getElementById("t").style.visibility="visible";
         }
     
@@ -2897,16 +2901,16 @@
 <script>
     
     document.getElementById("t").style.visibility="hidden";
-    document.onkeydown = function(evt) {
-        evt = evt || window.event;
-        if (evt.keyCode == 32) {
-            var box = document.getElementById("messageBox");
-            box.style.visibility="hidden";
-            document.getElementById("gametitle").remove();
-            document.getElementById("output").remove();
-            alert("onkeydown");
-        }
-    };
+    // document.onkeydown = function(evt) {
+    //     evt = evt || window.event;
+    //     if (evt.keyCode == 32) {
+    //         // var box = document.getElementById("messageBox");
+    //         // box.style.visibility="hidden";
+    //         document.getElementById("messageBox").remove()
+    //         document.getElementById("gametitle").remove();
+    //         document.getElementById("output").remove();
+    //     }
+    // };
 </script>
 
     
