@@ -68,7 +68,7 @@
             if (snapshot.exists()) {
                 console.log(snapshot.val());
                 stats_db = snapshot.val();
-                document.getElementById("stats_highscore").innerHTML = "MVP High Score: " + stats_db.username + " -      " + stats_db.highscore;
+                document.getElementById("stats_highscore").innerHTML = "Best Player High Score: " + stats_db.username + " -      " + stats_db.highscore;
             } else {
                 console.log("No data available");
                 document.getElementById("info").innerHTML = "No data available";
@@ -2382,7 +2382,8 @@
                 WIDTH: 20
             };
     
-            NightMode.phases = [140, 120, 100, 60, 40, 20, 0];
+            NightMode.phases = [140, 120, 100, 15, 10, 5, 0];
+            //NightMode.phases = [140, 120, 100, 60, 40, 20, 0];
     
             NightMode.prototype = {
                 /**
@@ -2872,7 +2873,7 @@
     </div>
     <div id="t">
         <div id="messageBox" class="sendmessage">
-            <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">Press Space to start</h1>
+            <h2 style="text-align: center;font-family: 'Open Sans', sans-serif;">Press Space to start</h2>
             <div class="niokbutton" onclick="okbuttonsend()"></div>
        </div>
        <div id="main-frame-error" class="interstitial-wrapper">
